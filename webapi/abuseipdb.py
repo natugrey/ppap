@@ -13,4 +13,3 @@ def ipreport(ip, categories, comment):
     gurl = url2 + 'key=%s&category=%s&comment=%s&ip=%s'%(API_KEY, categories, comment, ip)
     res = requests.get(gurl)
     print res.content
-# ipreport('82.165.37.26', '10,11,14','')
