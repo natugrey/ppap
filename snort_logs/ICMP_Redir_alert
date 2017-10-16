@@ -1,0 +1,28 @@
+10/14-22:07:39.843902  [**] [1:366:7] ICMP PING *NIX [**] [Classification: Misc activity] [Priority: 3] {ICMP} 192.168.1.106 -> 192.168.1.113
+10/14-22:07:39.843902  [**] [1:384:5] ICMP PING [**] [Classification: Misc activity] [Priority: 3] {ICMP} 192.168.1.106 -> 192.168.1.113
+10/14-22:07:39.844542  [**] [1:408:5] ICMP Echo Reply [**] [Classification: Misc activity] [Priority: 3] {ICMP} 192.168.1.113 -> 192.168.1.106
+10/14-22:07:39.884192  [**] [1:472:4] ICMP redirect host [**] [Classification: Potentially Bad Traffic] [Priority: 2] {ICMP} 192.168.1.1 -> 192.168.1.106
+10/14-22:07:40.845648  [**] [1:366:7] ICMP PING *NIX [**] [Classification: Misc activity] [Priority: 3] {ICMP} 192.168.1.106 -> 192.168.1.113
+10/14-22:07:40.845648  [**] [1:384:5] ICMP PING [**] [Classification: Misc activity] [Priority: 3] {ICMP} 192.168.1.106 -> 192.168.1.113
+10/14-22:07:40.846210  [**] [1:408:5] ICMP Echo Reply [**] [Classification: Misc activity] [Priority: 3] {ICMP} 192.168.1.113 -> 192.168.1.106
+10/14-22:07:40.892269  [**] [1:472:4] ICMP redirect host [**] [Classification: Potentially Bad Traffic] [Priority: 2] {ICMP} 192.168.1.1 -> 192.168.1.106
+10/14-22:07:41.847701  [**] [1:366:7] ICMP PING *NIX [**] [Classification: Misc activity] [Priority: 3] {ICMP} 192.168.1.106 -> 192.168.1.113
+10/14-22:07:41.847701  [**] [1:384:5] ICMP PING [**] [Classification: Misc activity] [Priority: 3] {ICMP} 192.168.1.106 -> 192.168.1.113
+10/14-22:07:41.848246  [**] [1:408:5] ICMP Echo Reply [**] [Classification: Misc activity] [Priority: 3] {ICMP} 192.168.1.113 -> 192.168.1.106
+10/14-22:07:41.900258  [**] [1:472:4] ICMP redirect host [**] [Classification: Potentially Bad Traffic] [Priority: 2] {ICMP} 192.168.1.1 -> 192.168.1.106
+10/14-22:07:42.849541  [**] [1:366:7] ICMP PING *NIX [**] [Classification: Misc activity] [Priority: 3] {ICMP} 192.168.1.106 -> 192.168.1.113
+10/14-22:07:42.849541  [**] [1:384:5] ICMP PING [**] [Classification: Misc activity] [Priority: 3] {ICMP} 192.168.1.106 -> 192.168.1.113
+10/14-22:07:42.850185  [**] [1:408:5] ICMP Echo Reply [**] [Classification: Misc activity] [Priority: 3] {ICMP} 192.168.1.113 -> 192.168.1.106
+10/14-22:07:42.852228  [**] [1:472:4] ICMP redirect host [**] [Classification: Potentially Bad Traffic] [Priority: 2] {ICMP} 192.168.1.1 -> 192.168.1.106
+10/14-22:07:43.851581  [**] [1:366:7] ICMP PING *NIX [**] [Classification: Misc activity] [Priority: 3] {ICMP} 192.168.1.106 -> 192.168.1.113
+10/14-22:07:43.851581  [**] [1:384:5] ICMP PING [**] [Classification: Misc activity] [Priority: 3] {ICMP} 192.168.1.106 -> 192.168.1.113
+10/14-22:07:43.852136  [**] [1:408:5] ICMP Echo Reply [**] [Classification: Misc activity] [Priority: 3] {ICMP} 192.168.1.113 -> 192.168.1.106
+10/14-22:07:43.860235  [**] [1:472:4] ICMP redirect host [**] [Classification: Potentially Bad Traffic] [Priority: 2] {ICMP} 192.168.1.1 -> 192.168.1.106
+10/14-22:07:44.853511  [**] [1:366:7] ICMP PING *NIX [**] [Classification: Misc activity] [Priority: 3] {ICMP} 192.168.1.106 -> 192.168.1.113
+10/14-22:07:44.853511  [**] [1:384:5] ICMP PING [**] [Classification: Misc activity] [Priority: 3] {ICMP} 192.168.1.106 -> 192.168.1.113
+10/14-22:07:44.854209  [**] [1:408:5] ICMP Echo Reply [**] [Classification: Misc activity] [Priority: 3] {ICMP} 192.168.1.113 -> 192.168.1.106
+10/14-22:07:44.868195  [**] [1:472:4] ICMP redirect host [**] [Classification: Potentially Bad Traffic] [Priority: 2] {ICMP} 192.168.1.1 -> 192.168.1.106
+10/14-22:07:47.276133  [**] [1:527:8] BAD-TRAFFIC same SRC/DST [**] [Classification: Potentially Bad Traffic] [Priority: 2] {ICMP} 192.168.1.1 -> 192.168.1.1
+10/14-22:07:47.276133  [**] [1:472:4] ICMP redirect host [**] [Classification: Potentially Bad Traffic] [Priority: 2] {ICMP} 192.168.1.1 -> 192.168.1.1
+10/14-22:07:47.276157  [**] [1:527:8] BAD-TRAFFIC same SRC/DST [**] [Classification: Potentially Bad Traffic] [Priority: 2] {ICMP} 192.168.1.1 -> 192.168.1.1
+10/14-22:07:47.276157  [**] [1:472:4] ICMP redirect host [**] [Classification: Potentially Bad Traffic] [Priority: 2] {ICMP} 192.168.1.1 -> 192.168.1.1
