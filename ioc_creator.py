@@ -1,5 +1,5 @@
 #coding=utf-8
-import optparse
+
 import os
 import fileinput
 import uuid
