@@ -64,8 +64,10 @@ def regTermPopulate(line, f):
 def emailTermPopulate(line,f):
     f.write('\t\t\t<IndicatorItem id="'+str(uuid.uuid4())+'" condition="contains">\n\t\t\t\t<Context document="Email" search="Email/From" type="mir" />\n\t\t\t\t<Content type="string">'+ line.rstrip() + '</Content>\n\t\t\t\t</IndicatorItem>\n')
 
+def snortTermPopulate(line,f):
+    f.write('\t\t\t<IndicatorItem id="'+str(uuid.uuid4())+'" condition="contains">\n\t\t\t\t<Context document="Snort" search="Snort/Snort" type="mir" />\n\t\t\t\t<Content type="string">'+ line.rstrip() + '</Content>\n\t\t\t\t</IndicatorItem>\n')
 
-def generateioc():
+def generateIOC():
     iocname = str(uuid.uuid4())
     f = open(iocname + '/iocfiles/%s.ioc'%iocname, 'w')
     printIOCHeader(f)
