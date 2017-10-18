@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<ioc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="85ebad97-5ff9-4812-879b-5037de28c64f" last-modified="2017-10-17T13:15:51" xmlns="http://schemas.mandiant.com/2010/ioc">
+  <short_description>attack1</short_description>
+  <description>robot</description>
+  <authored_by>wang</authored_by>
+  <authored_date>2017-10-17T10:31:59</authored_date>
+  <links />
+  <definition>
+    <Indicator operator="OR" id="72218673-239f-4bd7-a994-a679a7a6e6ed">
+      <IndicatorItem id="7acc7465-5165-400a-9ff7-3ceef4c0dc96" condition="contains">
+        <Context document="DnsEntryItem" search="DnsEntryItem/Host" type="mir" />
+        <Content type="string">annnotate.com</Content>
+      </IndicatorItem>
+      <Indicator operator="AND" id="cab3cd48-0a60-4733-9e21-8ed0dfcc757b">
+        <IndicatorItem id="dc8eeef3-9eb7-487c-9db0-c7f84128993a" condition="contains">
+          <Context document="Snort" search="Snort/Snort" type="mir" />
+          <Content type="string">icmp redirect</Content>
+        </IndicatorItem>
+      </Indicator>
+    </Indicator>
+  </definition>
+</ioc>
