@@ -7,18 +7,24 @@ from webapi.fetchloc import fetchloc1, fetchloc2
 from webapi.ifrobot import ifrobot
 
 '''
-vulinfo = {'ip': [{'description': description, 'dns': dns}, ...],
+vulinfo = {'ip': [type,{'description': description, 'dns': dns}, {'description':...}...],
             ...
            }
 '''
-vulinfo = {}
-list  = []
+
 def getvulinfo(iplist):
+    vulinfo = {}
+    list = []
     for key in iplist:
         for x in iplist[key]:
-            list.append(scanipv4(key))
-            list.append(scanip(key))
-            list.append(ipcheck(key))
+            list.append(iplist[key][1])
+            for y in scanipv4(key):
+                list.append(y)
+            for y in scanip(key):
+                list.append(y)
+            for y in ipcheck(key):
+                list.append(y)
             vulinfo[key] = list
             list = []
-
+    print vulinfo
+    return vulinfo
