@@ -40,7 +40,6 @@ def dealwithlogs(f):
                 print e
         else:
             break
-
 from ioc_creator import generateIOC
 def main():
     f = open('snort_logs/Scan_alert', 'r');

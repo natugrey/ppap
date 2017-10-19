@@ -53,7 +53,6 @@ def domainTermPopulate(domain, f):
     f.write('\t\t\t<IndicatorItem id="' + str(
         uuid.uuid4()) + '" condition="contains">\n\t\t\t\t<Context document="Network" search="Network/DNS" type="mir" />\n\t\t\t\t<Content type="string">' + domain + '</Content>\n\t\t\t</IndicatorItem>\n')
 
-
 def ipTermPopulate(ip, f):
     f.write('\t\t\t<IndicatorItem id="' + str(
         uuid.uuid4()) + '" condition="is">\n\t\t\t\t<Context document="PortItem" search="PortItem/remoteIP" type="mir" />\n\t\t\t\t<Content type="IP">' + ip + '</Content>\n\t\t\t</IndicatorItem>\n')

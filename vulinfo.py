@@ -33,5 +33,5 @@ def getvulinfo(iplist):
             list.append(dns)
             vulinfo[key] = list
             list = []
-    print vulinfo
+    # print vulinfo
     return vulinfo
