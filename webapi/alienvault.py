@@ -8,8 +8,12 @@ OTX_SERVER = 'https://otx.alienvault.com/'
 otx = OTXv2(API_KEY, server=OTX_SERVER)
 
 def scanipv4(ipv4):
-    res = otx.get_indicator_details_full(IndicatorTypes.IPv4, ipv4)
-    data = dataformat(res)
+    data = []
+    try:
+        res = otx.get_indicator_details_full(IndicatorTypes.IPv4, ipv4)
+        data = dataformat(res)
+    except Exception,e:
+        print e
     return data
 
 def scanipv6(ipv6):
@@ -68,7 +72,7 @@ def dataformat(res):
             if not dict.has_key('info'):
                 dict['info'] = ''
             data.append(dict)
-    print data
+    # print data
     return data
 
-scanipv4('82.165.37.26')
+# scanipv4('82.165.37.26')

@@ -15,22 +15,25 @@ def scanip(ip):
     cookies = {}
     cookies['PLAY_FLASH'] = play_flash
     res = requests.get(gurl, headers=headers, cookies=cookies)
-    intelli = re.match('[\d\D]+<table class="table hidden table-vertical" id="intelli_table">([\D\d]+?)</table>', res.content).group(1)
     intelli_list = []
-    listhead = ['intelli_source', 'discovery_time', 'intelli_type']
-    intelli_list.append(listhead)
-    records = re.findall('<td>[\d\D]+?</td>', intelli)
-    count = 1
-    tmptup = []
-    for x in records:
-        info = re.match('<td>(.+)</td>', x).group(1)
-        if count%3 != 0:
-            tmptup.append(info)
-        else:
-            intelli_list.append(tmptup)
-            tmptup = []
-            tmptup.append(info)
-        count += 1
+    try:
+        intelli = re.match('[\d\D]+<table class="table hidden table-vertical" id="intelli_table">([\D\d]+?)</table>', res.content).group(1)
+        listhead = ['intelli_source', 'discovery_time', 'intelli_type']
+        intelli_list.append(listhead)
+        records = re.findall('<td>[\d\D]+?</td>', intelli)
+        count = 1
+        tmptup = []
+        for x in records:
+            info = re.match('<td>(.+)</td>', x).group(1)
+            if count%3 != 0:
+                tmptup.append(info)
+            else:
+                intelli_list.append(tmptup)
+                tmptup = []
+                tmptup.append(info)
+            count += 1
+    except Exception,e:
+        print e
     data = dataformat(intelli_list)
     return data
 
@@ -52,7 +55,7 @@ def dataformat(intelli_list):
             if dict.has_key('info'):
                 data.append(dict)
                 dict = {'dns': ''}
-    print data
+    # print data
     return data
 
 # scanip('82.165.37.26')

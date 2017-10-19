@@ -19,3 +19,11 @@ def ipreverse(ip):
     res = requests.get(url1, params=params)
     print res.content
 
+'''
+data = [{'dns':dns, 'info': info},
+        ...
+        ]
+'''
+def dataformat(content):
+    data = []
+    return data

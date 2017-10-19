@@ -23,10 +23,10 @@ API_KEY = '2HwugmLnnW3uv8KEcvLPoL8u6kDG1PGF8fy4VhUp'
 def ipcheck(ip):
     gurl = url + '%s/json?key=%s'%(ip, API_KEY)
     res = requests.get(gurl)
-    print res.content
+    # print res.content
     # data = []
     data = dataformat(res.content)
-    print data
+    # print data
     return data
 '''
 data = [{'dns':dns, 'info': info},
@@ -37,7 +37,7 @@ def dataformat(content):
     data = []
     dict = {'dns':''}
     list = re.findall('\[([\d,]+)]', content)
-    print list
+    # print list
     for x in list:
         nums = re.findall('\d+', x)
         for y in nums:
@@ -45,12 +45,11 @@ def dataformat(content):
                 if not dict.has_key('info'):
                     dict['info'] = category[y] + ';'
                 else:
-                    print '123'+ category[y]
                     dict['info'] = dict['info'] + category[y] + ';'
         if dict.has_key('info'):
             data.append(dict)
             dict = {'dns': ''}
     return data
 
-ipcheck('88.211.129.250')
+# ipcheck('88.211.129.250')
 
