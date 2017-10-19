@@ -9,8 +9,8 @@ otx = OTXv2(API_KEY, server=OTX_SERVER)
 
 def scanipv4(ipv4):
     res = otx.get_indicator_details_full(IndicatorTypes.IPv4, ipv4)
-    print res
-    return res
+    data = dataformat(res)
+    return data
 
 def scanipv6(ipv6):
     res = otx.get_indicator_details_full(IndicatorTypes.IPv6, ipv6)
@@ -48,4 +48,27 @@ def searchcve(cve):
     print res
     return res
 
-# scanipv4('162.253.66.75')
+'''
+data = [{'dns':dns, 'info': info},
+        ...
+        ]
+'''
+def dataformat(res):
+    data = []
+    if len(res['reputation']['reputation']['activities']) > 0:
+        for x in res['reputation']['reputation']['activities']:
+            dict = {}
+            print x
+            if x.has_key('domain'):
+                dict['dns'] = x['domain']
+            if x.has_key('name'):
+                dict['info'] = x['name']
+            if not dict.has_key('dns'):
+                dict['dns'] = ''
+            if not dict.has_key('info'):
+                dict['info'] = ''
+            data.append(dict)
+    print data
+    return data
+
+scanipv4('82.165.37.26')
