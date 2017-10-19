@@ -10,7 +10,7 @@ iplist = {'ip':(timestamp,type),
           }
 '''
 iplist = {}
-# from ioc_creator import generateIOC
+
 # def date2timestamp(date):
 #     date = '2017/' + date
 #     msec = float(re.match('.*\.([\d]+)', date).group(1))/1000000
@@ -40,6 +40,8 @@ def dealwithlogs(f):
                 print e
         else:
             break
+
+from ioc_creator import generateIOC
 def main():
     f = open('snort_logs/Scan_alert', 'r');
     dealwithlogs(f)
@@ -50,7 +52,7 @@ def main():
     print iplist
     # ifapt(iplist)
     vulinfo = getvulinfo(iplist)
-    # generateIOC(vulinfo)
+    generateIOC(vulinfo)
 
 if __name__ == '__main__':
     main()
