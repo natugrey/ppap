@@ -31,10 +31,31 @@ def scanip(ip):
             tmptup = []
             tmptup.append(info)
         count += 1
-    return intelli_list
+    data = dataformat(intelli_list)
+    return data
+
+'''
+data = [{'dns':dns, 'info': info},
+        ...
+        ]
+'''
+def dataformat(intelli_list):
+    data = []
+    dict = {'dns':''}
+    intelli_len  =len(intelli_list)
+    if intelli_len>=2:
+        for x in range(1, intelli_len):
+            if not dict.has_key('info'):
+                dict['info'] = intelli_list[x][0]
+            else:
+                dict['info'] = dict['info'] + intelli_list[x][0] + ';'
+            if dict.has_key('info'):
+                data.append(dict)
+                dict = {'dns': ''}
+    print data
+    return data
 
 scanip('82.165.37.26')
-
 '''
 other services
 '''
