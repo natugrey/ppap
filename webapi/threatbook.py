@@ -55,7 +55,7 @@ def dataformat(intelli_list):
     print data
     return data
 
-scanip('82.165.37.26')
+# scanip('82.165.37.26')
 '''
 other services
 '''
