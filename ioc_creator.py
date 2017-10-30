@@ -67,7 +67,7 @@ def generateIOC(vulinfo):
     iocname = str(uuid.uuid4())
     for key in vulinfo:
         for x in vulinfo[key][0]:
-            f = open(iocname + '/iocfiles/%s' % iocname, 'w')
+            f = open('/iocfiles/%s' % iocname, 'w')
             description = ''
             for y in vulinfo[key][1]:
                 description += y
@@ -77,6 +77,7 @@ def generateIOC(vulinfo):
             ipTermPopulate(key, f)
             for z in vulinfo[key][2]:
                 domainTermPopulate(z, f)
+        print("ioc file")
         printIOCFooter(f)
         f.close()
 
