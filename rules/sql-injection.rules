@@ -1,0 +1,11 @@
+#检测元字符:' " -- #
+#alert tcp any any -> $HOME_NET $HTTP_PORTS (msg:"sql-injection attack"; flow:to_server,established; pcre:"/(\%27)|(\')|(\-\-)|(\")|(\%23)|(\#)/ix"; sid:1000001;)
+#检测关键字:union select
+alert tcp any any -> $HOME_NET $HTTP_PORTS (msg:"SQL Injection attack"; content:"union select"; sid:1000002;)
+#检测关键字:order by
+alert tcp any any -> $HOME_NET $HTTP_PORTS (msg:"SQL Injection attack"; content:"order by"; sid:1000003;)
+#检测post:1=1
+alert tcp any any -> $HOME_NET any (msg:"SQL Injection attack"; pcre:"/[0-9]=[0-9]/ix"; sid:1000004;)
+
+
+

@@ -1,0 +1,9 @@
+#检测:<script> </script>
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"Cross site scripting attack"; flow:to_server,established; pcre:"/((\%3C)|<)((\%2F)|\/)*script((\%3E)|>)/ix"; sid:3000001;)
+
+#检测:<body onload=...>
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"Cross site scripting attack"; flow:to_server,established; pcre:"/((\%3C)|<)((\%62)|b)((\%6F)|o)((\%64)|d)((\%79)|y)((\%2B)|\+)((\%6F)|o)((\%6E)|n)((\%6C)|l)((\%6F)|o)((\%61)|a)((\%64)|d)(.*?)((\%3E)|>)/ix"; sid:3000002;)
+
+#检测:<img src...>
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"Cross site scripting attack"; flow:to_server,established; pcre:"/((\%3C)|<)((\%69)|i)((\%6D)|m)((\%67)|g)(.*?)((\%3E)|>)/ix"; sid:3000003;)
+
