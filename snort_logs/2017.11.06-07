@@ -1,32 +1,3 @@
-10/31-02:24:28.200732  [**] [1:486:4] ICMP Destination Unreachable Communication with Destination Host is Administratively Prohibited [**] [Classification: Misc activity] [Priority: 3] {ICMP} 77.72.82.222 -> 67.216.203.183
-10/31-02:41:35.273210  [**] [1:2049:4] MS-SQL ping attempt [**] [Classification: Misc activity] [Priority: 3] {UDP} 216.218.206.113:38493 -> 67.216.203.183:1434
-10/31-03:03:31.292153  [**] [1:486:4] ICMP Destination Unreachable Communication with Destination Host is Administratively Prohibited [**] [Classification: Misc activity] [Priority: 3] {ICMP} 77.72.82.222 -> 67.216.203.183
-10/31-03:04:01.357006  [**] [1:486:4] ICMP Destination Unreachable Communication with Destination Host is Administratively Prohibited [**] [Classification: Misc activity] [Priority: 3] {ICMP} 77.72.82.222 -> 67.216.203.183
-10/31-03:11:31.734545  [**] [1:1917:6] SCAN UPnP service discover attempt [**] [Classification: Detection of a Network Scan] [Priority: 3] {UDP} 184.105.139.125:37968 -> 67.216.203.183:1900
-10/31-03:14:09.886303  [**] [1:1411:10] SNMP public access udp [**] [Classification: Attempted Information Leak] [Priority: 2] {UDP} 185.94.111.1:58642 -> 67.216.203.183:161
-10/31-03:14:09.886303  [**] [1:1417:9] SNMP request udp [**] [Classification: Attempted Information Leak] [Priority: 2] {UDP} 185.94.111.1:58642 -> 67.216.203.183:161
-10/31-03:18:46.368559  [**] [1:486:4] ICMP Destination Unreachable Communication with Destination Host is Administratively Prohibited [**] [Classification: Misc activity] [Priority: 3] {ICMP} 5.188.86.41 -> 67.216.203.183
-10/31-03:32:41.137636  [**] [1:1411:10] SNMP public access udp [**] [Classification: Attempted Information Leak] [Priority: 2] {UDP} 129.250.206.86:38565 -> 67.216.203.183:161
-10/31-03:32:41.137636  [**] [1:1417:9] SNMP request udp [**] [Classification: Attempted Information Leak] [Priority: 2] {UDP} 129.250.206.86:38565 -> 67.216.203.183:161
-10/31-03:32:41.137669  [**] [1:1411:10] SNMP public access udp [**] [Classification: Attempted Information Leak] [Priority: 2] {UDP} 129.250.206.86:38565 -> 67.216.203.183:161
-10/31-03:32:41.137669  [**] [1:1417:9] SNMP request udp [**] [Classification: Attempted Information Leak] [Priority: 2] {UDP} 129.250.206.86:38565 -> 67.216.203.183:161
-10/31-04:01:04.060313  [**] [1:486:4] ICMP Destination Unreachable Communication with Destination Host is Administratively Prohibited [**] [Classification: Misc activity] [Priority: 3] {ICMP} 5.188.86.53 -> 67.216.203.183
-10/31-04:41:39.387579  [**] [1:486:4] ICMP Destination Unreachable Communication with Destination Host is Administratively Prohibited [**] [Classification: Misc activity] [Priority: 3] {ICMP} 77.72.82.222 -> 67.216.203.183
-10/31-04:44:52.103161  [**] [1:366:7] ICMP PING *NIX [**] [Classification: Misc activity] [Priority: 3] {ICMP} 153.34.226.229 -> 67.216.203.183
-10/31-04:44:53.104821  [**] [1:366:7] ICMP PING *NIX [**] [Classification: Misc activity] [Priority: 3] {ICMP} 153.34.226.229 -> 67.216.203.183
-10/31-04:44:54.106004  [**] [1:366:7] ICMP PING *NIX [**] [Classification: Misc activity] [Priority: 3] {ICMP} 153.34.226.229 -> 67.216.203.183
-10/31-04:44:55.108197  [**] [1:366:7] ICMP PING *NIX [**] [Classification: Misc activity] [Priority: 3] {ICMP} 153.34.226.229 -> 67.216.203.183
-10/31-04:44:56.111029  [**] [1:366:7] ICMP PING *NIX [**] [Classification: Misc activity] [Priority: 3] {ICMP} 153.34.226.229 -> 67.216.203.183
-10/31-04:44:57.191530  [**] [1:366:7] ICMP PING *NIX [**] [Classification: Misc activity] [Priority: 3] {ICMP} 153.34.226.229 -> 67.216.203.183
-10/31-04:44:58.113852  [**] [1:366:7] ICMP PING *NIX [**] [Classification: Misc activity] [Priority: 3] {ICMP} 153.34.226.229 -> 67.216.203.183
-10/31-05:02:34.566965  [**] [1:469:3] ICMP PING NMAP [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 220.160.127.234 -> 67.216.203.183
-10/31-05:17:55.842542  [**] [1:1917:6] SCAN UPnP service discover attempt [**] [Classification: Detection of a Network Scan] [Priority: 3] {UDP} 185.94.111.1:58255 -> 67.216.203.183:1900
-10/31-05:31:18.128437  [**] [1:408:5] ICMP Echo Reply [**] [Classification: Misc activity] [Priority: 3] {ICMP} 104.193.88.123 -> 67.216.203.183
-10/31-05:31:19.129622  [**] [1:408:5] ICMP Echo Reply [**] [Classification: Misc activity] [Priority: 3] {ICMP} 104.193.88.123 -> 67.216.203.183
-10/31-05:52:31.123360  [**] [1:1917:6] SCAN UPnP service discover attempt [**] [Classification: Detection of a Network Scan] [Priority: 3] {UDP} 52.73.169.169:44858 -> 67.216.203.183:1900
-10/31-05:55:06.489528  [**] [1:486:4] ICMP Destination Unreachable Communication with Destination Host is Administratively Prohibited [**] [Classification: Misc activity] [Priority: 3] {ICMP} 5.188.86.41 -> 67.216.203.183
-10/31-06:50:32.024032  [**] [1:486:4] ICMP Destination Unreachable Communication with Destination Host is Administratively Prohibited [**] [Classification: Misc activity] [Priority: 3] {ICMP} 77.72.82.222 -> 67.216.203.183
-10/31-07:18:54.755753  [**] [1:486:4] ICMP Destination Unreachable Communication with Destination Host is Administratively Prohibited [**] [Classification: Misc activity] [Priority: 3] {ICMP} 111.40.124.43 -> 67.216.203.183
 11/06-04:51:04.991082  [**] [1:312:6] EXPLOIT ntpdx overflow attempt [**] [Classification: Attempted Administrator Privilege Gain] [Priority: 1] {UDP} 106.187.35.165:47444 -> 67.216.203.183:123
 11/06-05:19:34.005041  [**] [1:402:7] ICMP Destination Unreachable Port Unreachable [**] [Classification: Misc activity] [Priority: 3] {ICMP} 54.37.22.26 -> 67.216.203.183
 11/06-05:24:55.949999  [**] [1:486:4] ICMP Destination Unreachable Communication with Destination Host is Administratively Prohibited [**] [Classification: Misc activity] [Priority: 3] {ICMP} 185.70.184.82 -> 67.216.203.183
