@@ -7,7 +7,7 @@ from webapi.fetchloc import fetchloc1, fetchloc2
 from webapi.ifrobot import ifrobot
 
 '''
-vulinfo = {'ip': [['type1','type2'],{'description': description, 'dns': dns}, {'description':...}...],
+vulinfo = {'ip': ['types':...],['description': ...], ['dns':...]],
             ...
            }
 '''
