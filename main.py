@@ -27,7 +27,8 @@ def dealwithlogs(f):
         line = f.readline()
         if line:
             try:
-                ip = re.match('.*\D([\d]+\.[\d]+\.[\d]+\.[\d]+):[\d]+ ->', line).group(1)
+                ip = re.match('.*\D([\d]+\.[\d]+\.[\d]+\.[\d]+)(:[\d])* ->', line).group(1)
+                print ip
                 if ip:
                     # date = re.match('([\d]+/[\d]+-[\d]+:[\d]+:[\d]+\.[\d]+)[\D]', line).group(1)
                     type = re.match('.*\[\*\*] \[[^\]]+] ([\w ]+) \[\*\*.*', line).group(1)
@@ -42,9 +43,9 @@ def dealwithlogs(f):
             break
 from ioc_creator import generateIOC
 def main():
-    f = open('snort_logs/Scan_alert', 'r');
-    dealwithlogs(f)
-    f.close()
+    # f = open('snort_logs/Scan_alert', 'r');
+    # dealwithlogs(f)
+    # f.close()
     f = open('snort_logs/ICMP_Redir_alert', 'r')
     dealwithlogs(f)
     f.close()
