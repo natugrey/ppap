@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<ioc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="iocfiles/892d481c-adf3-47e8-b62b-df249200893b" last-modified="2017-10-30T17:00:55" xmlns="http://schemas.mandiant.com/2010/ioc">
+	<short_description> ip threat </short_description>
+	<description> descriptiondns </description>
+	<authored_by> wangxin 17 </authored_by>
+	<authored_date>2017-10-30T17:00:55</authored_date>
+	<links />
+	<definition>
+		<Indicator operator="OR" id="782c01e4-982a-4200-bf11-7a30759f8ae6">
+			<IndicatorItem id="4536e20a-7151-4876-bcae-bb188f21ee1b" condition="is">
+				<Context document="PortItem" search="PortItem/remoteIP" type="mir" />
+				<Content type="IP">ip</Content>
+			</IndicatorItem>
+			<IndicatorItem id="a43bc1b6-2c8f-4a84-bc57-9fcfc570906b" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">description</Content>
+			</IndicatorItem>
+		</Indicator>
+	</definition>
+</ioc>
