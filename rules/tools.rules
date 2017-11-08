@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"nmap found"; content:"nmap"; sid:2000001;)
