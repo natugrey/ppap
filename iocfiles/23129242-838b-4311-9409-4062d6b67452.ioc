@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<ioc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="iocfiles/23129242-838b-4311-9409-4062d6b67452" last-modified="2017-10-30T17:03:07" xmlns="http://schemas.mandiant.com/2010/ioc">
+	<short_description> ip threat </short_description>
+	<description> Malware DomainMalware DomainMalware IPMalware DomainMalware IPMalware DomainMalware IPMalware IPC&CMalware IPC&CC&CC&CC&CC&CMalware IPMalware IPMalware IPMalware IPMalware IPMalware IPC&CMalware IPC&CMalware DomainMalware DomainMalware IPMalware DomainMalware IPMalware DomainMalware IPMalware IPC&CMalware IPC&CC&CC&CC&CC&CMalware IPMalware IPMalware IPMalware IPMalware IPMalware IPC&CMalware IPC&CMalware DomainMalware DomainMalware IPMalware DomainMalware IPMalware DomainMalware IPMalware IPC&CMalware IPC&CC&CC&CC&CC&CMalware IPMalware IPMalware IPMalware IPMalware IPMalware IPC&CMalware IPC&CMalware DomainMalware DomainMalware IPMalware DomainMalware IPMalware DomainMalware IPMalware IPC&CMalware IPC&CC&CC&CC&CC&CMalware IPMalware IPMalware IPMalware IPMalware IPMalware IPC&CMalware IPC&CMalware DomainMalware DomainMalware IPMalware DomainMalware IPMalware DomainMalware IPMalware IPC&CMalware IPC&CC&CC&CC&CC&CMalware IPMalware IPMalware IPMalware IPMalware IPMalware IPC&CMalware IPC&CMalware DomainMalware DomainMalware IPMalware DomainMalware IPMalware DomainMalware IPMalware IPC&CMalware IPC&CC&CC&CC&CC&CMalware IPMalware IPMalware IPMalware IPMalware IPMalware IPC&CMalware IPC&CFraud Orders;DDoS Attack;Open Proxy;Web Spam;Email Spam;Port Scan;Brute-Force;SSH;Brute-Force;SSH;Open Proxy;Fraud Orders;DDoS Attack;Open Proxy;Web Spam;Email Spam;Port Scan;Brute-Force;SSH;Brute-Force;SSH;Open Proxy;Fraud Orders;DDoS Attack;Open Proxy;Web Spam;Email Spam;Port Scan;Brute-Force;SSH;Brute-Force;SSH;Open Proxy;Fraud Orders;DDoS Attack;Open Proxy;Web Spam;Email Spam;Port Scan;Brute-Force;SSH;Brute-Force;SSH;Open Proxy;Fraud Orders;DDoS Attack;Open Proxy;Web Spam;Email Spam;Port Scan;Brute-Force;SSH;Brute-Force;SSH;Open Proxy;Fraud Orders;DDoS Attack;Open Proxy;Web Spam;Email Spam;Port Scan;Brute-Force;SSH;Brute-Force;SSH;Open Proxy;Fraud Orders;DDoS Attack;Open Proxy;Web Spam;Email Spam;Port Scan;Brute-Force;SSH;Brute-Force;SSH;Open Proxy;Fraud Orders;DDoS Attack;Open Proxy;Web Spam;Email Spam;Port Scan;Brute-Force;SSH;Brute-Force;SSH;Open Proxy; </description>
+	<authored_by> wangxin 17 </authored_by>
+	<authored_date>2017-10-30T17:03:07</authored_date>
+	<links />
+	<definition>
+		<Indicator operator="OR" id="194568d8-821e-4116-8435-46b4faccfaf8">
+			<IndicatorItem id="3b19152d-0ce3-4919-abf0-9ebacecd21c9" condition="is">
+				<Context document="PortItem" search="PortItem/remoteIP" type="mir" />
+				<Content type="IP">192.168.1.1</Content>
+			</IndicatorItem>
+			<IndicatorItem id="2765bd1d-61f5-421a-ab81-66e93a36ba82" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">domain454002.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="24723eef-cd51-4e83-a868-6174abda664a" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">advancedhelper.net</Content>
+			</IndicatorItem>
+			<IndicatorItem id="5e0a874f-b9ff-4677-9661-b9eb745b80c5" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="7d2d80ed-33bd-4657-8173-cb10e26eed37" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">domain454002.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="c3846339-5265-4b28-8c99-8260b5a8cdaf" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="0c6fb6fc-74d2-4603-b3f4-1c3319c2457a" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">555pokerstreamx.org</Content>
+			</IndicatorItem>
+			<IndicatorItem id="c6b7240e-60e5-44d1-80f3-48167bfd4230" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="9a8a16d4-843f-47d8-a3fa-5214b3332be7" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">advancedhelper.net</Content>
+			</IndicatorItem>
+			<IndicatorItem id="a2fde053-8d53-4c24-bb92-d21284552778" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">mullyfonner383.org</Content>
+			</IndicatorItem>
+			<IndicatorItem id="f47c049b-c638-4052-b95b-5ce9f3e0a36b" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="82306b1d-193e-4d88-9c71-5cc580c18666" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">ns1.cgimybin.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="8941aec0-3e81-47e3-b464-d9a91617cfc5" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">koloboyz.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="9172bd1c-917c-4e54-a7ef-a2528f57d4cf" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">rdn-life.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="ee2101cf-7d52-476f-97ce-638b26727b00" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">ammitober.net</Content>
+			</IndicatorItem>
+			<IndicatorItem id="fab52640-c7e3-45a5-8929-b2d3658b6984" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">artyeaigkbm.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="4af4f240-ef0b-439b-a286-f4b6549361c4" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">domain454002.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="4d9c09de-0ecb-4f7d-99df-fa457b352c14" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="4f703c92-5c03-498a-8341-58f00cf86a5b" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">advancedhelper.net</Content>
+			</IndicatorItem>
+			<IndicatorItem id="7f3a1abd-7331-4cb7-8ac6-e1fec578ba8a" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="4ff652c0-ff4e-414f-b758-31da60b41b04" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">zouweengongohgaegeetiebi.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="dbdb974c-a322-4a80-ae24-42a845345af8" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">gamemari.net</Content>
+			</IndicatorItem>
+			<IndicatorItem id="46a21d4d-91a5-4020-a2ba-b09c73a95969" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">jjvse.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="621eaacd-b596-407c-bdb7-caef78de93da" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">festivaloffire.net</Content>
+			</IndicatorItem>
+			<IndicatorItem id="7fac7499-bcb6-4414-b08f-3720c6f0c54b" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">jgworlddrivers.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="c16aefa6-eab2-44c7-9f7b-0189c55b0166" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">domain454002.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="18b55bbd-7c84-4a3c-9055-c43fb84bb495" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">advancedhelper.net</Content>
+			</IndicatorItem>
+			<IndicatorItem id="13963abf-4d62-4f4f-8cef-44a5d9062221" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="e173add0-678e-4c4d-b350-6d669dac0642" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">domain454002.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="e52c42a4-9829-48bf-b03f-add64b47777b" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="7e7e1890-a654-45b2-8918-600c1f1444fe" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">555pokerstreamx.org</Content>
+			</IndicatorItem>
+			<IndicatorItem id="d6a1d815-b114-467f-bcaf-25b48109112b" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="9bd5d526-aa01-4076-a8bc-7f31f9c8766e" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">advancedhelper.net</Content>
+			</IndicatorItem>
+			<IndicatorItem id="cf4dbc5b-f2eb-45ac-a644-433e82b7a0b1" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">mullyfonner383.org</Content>
+			</IndicatorItem>
+			<IndicatorItem id="8ac8e573-3dc7-4005-8a9c-c4a98baff00a" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="12e4f20c-6f44-48fe-86da-2c15ba7db57f" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">ns1.cgimybin.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="9d34c3d0-3984-4ab9-b9e5-6b0826081da7" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">koloboyz.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="67512278-8894-4ab0-9855-185e54f26595" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">rdn-life.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="7558838a-c537-423b-8d96-3abdf070dcbc" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">ammitober.net</Content>
+			</IndicatorItem>
+			<IndicatorItem id="dd8ef903-31f5-43c9-9c77-dd25ad2dc042" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">artyeaigkbm.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="78547328-6268-4795-a531-07f77b111cab" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">domain454002.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="a1fed82c-0803-4190-b33a-29adcf2b0ecc" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="8d0559df-8f41-4dff-a4ff-7a26f4d6464e" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">advancedhelper.net</Content>
+			</IndicatorItem>
+			<IndicatorItem id="2007acef-6bb5-43f7-979d-02b9f4f078d5" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="7fd8c4fe-776d-4c0d-b1c6-73d0d0e24882" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">zouweengongohgaegeetiebi.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="8bd5b4e7-e5df-4ee2-abdf-ff42f18fdb4a" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">gamemari.net</Content>
+			</IndicatorItem>
+			<IndicatorItem id="da7bcf83-1b29-4f68-b985-25cee37692cd" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">jjvse.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="76666815-ca50-4f26-8c9d-38d5b660b423" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">festivaloffire.net</Content>
+			</IndicatorItem>
+			<IndicatorItem id="41e1d643-a474-4e17-973b-cb9758f96e30" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">jgworlddrivers.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="204385ac-cfcf-4cac-a110-636d8fc3d7bc" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">domain454002.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="9ad7e311-8ac0-4425-92e5-2892fce7b3c9" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">advancedhelper.net</Content>
+			</IndicatorItem>
+			<IndicatorItem id="debe03c9-11dd-4328-b8cd-2e0253a5cb56" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="f6a1f341-d2c7-4b3e-acca-98754ae81e1c" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">domain454002.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="4068fd20-7819-4b87-a219-74fc7a463640" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="b68f221a-c78f-47e1-9e09-137483e3a969" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">555pokerstreamx.org</Content>
+			</IndicatorItem>
+			<IndicatorItem id="3474e33b-390f-4933-bb7a-25711f6ebd2e" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="c52c961a-a7dc-4955-ad4f-95fce7684c73" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">advancedhelper.net</Content>
+			</IndicatorItem>
+			<IndicatorItem id="29288cdc-0c14-420d-b454-135beb171ce1" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">mullyfonner383.org</Content>
+			</IndicatorItem>
+			<IndicatorItem id="810dce9d-6465-4271-8a00-8f6eed451942" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="4d38cc14-70ce-4759-a034-f204fb335e19" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">ns1.cgimybin.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="5e57f589-db62-447a-9f73-7a3086a606af" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">koloboyz.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="06a70725-a40c-44b7-8284-822684d0280c" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">rdn-life.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="2109e8e6-d2c6-42a5-81bd-7ae3c4c00a02" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">ammitober.net</Content>
+			</IndicatorItem>
+			<IndicatorItem id="da532110-47ec-4374-9ae7-3a67aa41d8d7" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">artyeaigkbm.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="266c6308-c803-4a5d-bb25-02b8dc49224d" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">domain454002.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="de146dd9-7c38-4f7d-b254-be1d6fe3e690" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="59277ed4-7d47-48d7-8e00-1d161615956d" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">advancedhelper.net</Content>
+			</IndicatorItem>
+			<IndicatorItem id="d4eec304-f2cc-48e7-8867-760ec9c65616" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="0a6f23ee-61ab-43ba-bd46-5f378ed71c25" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">zouweengongohgaegeetiebi.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="f83c6e1f-6740-4c75-9e91-4b525fd55bdd" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">gamemari.net</Content>
+			</IndicatorItem>
+			<IndicatorItem id="ce187687-50a0-4984-ac72-97d1bc7dcdb4" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">jjvse.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="b5714e8f-ed72-46bb-acdc-5f216565eef6" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">festivaloffire.net</Content>
+			</IndicatorItem>
+			<IndicatorItem id="206bd687-c66e-4ea4-87cf-82eaa96d57e4" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">jgworlddrivers.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="0ce451f2-2363-4ea4-b317-8bd62b2613c5" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">domain454002.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="9afd3f53-3a9a-44b6-87fc-12d79a809626" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">advancedhelper.net</Content>
+			</IndicatorItem>
+			<IndicatorItem id="669002cd-8af8-490a-9ca9-136441b70dac" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="3b64b334-13d7-4f29-a238-f6540751c506" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">domain454002.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="23a82ce7-3d91-48a6-9886-f96f949ece8a" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="3ee9865a-6930-420f-b2ac-14c68520cc53" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">555pokerstreamx.org</Content>
+			</IndicatorItem>
+			<IndicatorItem id="23bd1c58-eb94-4ac8-8c0e-e1f65b167049" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="86157bbd-dcf9-47c5-a049-be8dd85cf3ab" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">advancedhelper.net</Content>
+			</IndicatorItem>
+			<IndicatorItem id="a4fd36b1-ee00-47f4-aa83-dc1bd367afd6" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">mullyfonner383.org</Content>
+			</IndicatorItem>
+			<IndicatorItem id="c01ae532-aa9d-4520-92cf-59a097b618e7" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="05a4a8ec-eb30-43bb-80bf-70d2b42145da" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">ns1.cgimybin.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="74786844-1dc7-4cba-a935-469365dff793" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">koloboyz.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="ed67c07e-688c-4e78-99c7-f820f145425d" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">rdn-life.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="668ef9d3-26d9-4943-b95a-fed75b7f62d2" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">ammitober.net</Content>
+			</IndicatorItem>
+			<IndicatorItem id="858bc0fa-a0e5-4571-8ada-d09613352231" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">artyeaigkbm.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="dbdfdaa0-d786-4afb-a36f-31939295832c" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">domain454002.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="23621d90-3a31-4d87-b7d1-6da055fc8f17" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="767f3b69-0585-4c36-a04f-29f23e004a5b" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">advancedhelper.net</Content>
+			</IndicatorItem>
+			<IndicatorItem id="de5b76b6-8d06-4984-af55-a7fc0e7c35d9" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="1ee39ea5-6867-496c-9904-fe6d6736cb99" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">zouweengongohgaegeetiebi.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="3c78de83-b787-489f-9a02-b64dff00dd24" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">gamemari.net</Content>
+			</IndicatorItem>
+			<IndicatorItem id="9eff422a-446c-4aad-9b4b-b12574a1b914" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">jjvse.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="5296bbd4-3006-4494-922b-47544bfbbdd1" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">festivaloffire.net</Content>
+			</IndicatorItem>
+			<IndicatorItem id="6ea9e977-6e55-40b8-afd6-4782e1bd0ffe" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">jgworlddrivers.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="efffc62f-a376-4c51-8b9f-9bdb6b80f7ea" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">domain454002.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="43dac1f8-6bdc-4890-9d85-60e9a6579277" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">advancedhelper.net</Content>
+			</IndicatorItem>
+			<IndicatorItem id="1f4fa960-6c8e-47bb-a33d-6b21c96d011c" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="aa9de60d-ca8f-4f4b-aba2-ffba4d4085b4" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">domain454002.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="fc5a5191-8c2c-404e-ac40-defe3e564390" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="119418a2-7da2-4b50-a608-4bb98c2a2020" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">555pokerstreamx.org</Content>
+			</IndicatorItem>
+			<IndicatorItem id="779cebd2-b8a6-45a7-8b9b-263559e0c110" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="33e59a56-eae5-434f-8cdb-9e57a2ed7cbf" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">advancedhelper.net</Content>
+			</IndicatorItem>
+			<IndicatorItem id="ce2f051d-d5bb-415e-985f-a74993241214" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">mullyfonner383.org</Content>
+			</IndicatorItem>
+			<IndicatorItem id="6a2bcd4a-1ece-415d-bedb-0df05871d9c6" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="9952d277-e559-478e-908f-17f405bdcdb4" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">ns1.cgimybin.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="3453fb06-41e7-4074-901f-31fd1e9591a1" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">koloboyz.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="ca18299d-636a-4cb7-8699-841f5eab8922" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">rdn-life.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="dfae466c-e114-4888-a4e1-a8d79c3beb0a" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">ammitober.net</Content>
+			</IndicatorItem>
+			<IndicatorItem id="4710f691-354a-44f0-8e43-b51011f0c5f8" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">artyeaigkbm.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="333ab4fe-3483-4693-913e-23eabb234d0f" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">domain454002.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="b50dc6f7-c5df-4b45-a4d6-9d1f21f123eb" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="a9db4bb3-e38e-4b13-b654-cf54b95f1f8c" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">advancedhelper.net</Content>
+			</IndicatorItem>
+			<IndicatorItem id="2d296e15-b152-4da4-a910-f70c19786502" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="8e011e39-5a13-4952-9cc9-237b185e996f" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">zouweengongohgaegeetiebi.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="c35b07f2-13fa-4ea0-824d-dfe418d72e8f" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">gamemari.net</Content>
+			</IndicatorItem>
+			<IndicatorItem id="978e1875-341b-4001-9d6a-7a64a076dcbf" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">jjvse.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="9b26c498-6347-4e60-9ae6-1ecf2c183488" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">festivaloffire.net</Content>
+			</IndicatorItem>
+			<IndicatorItem id="8a268b0f-12f2-459f-8a04-30633e95b7d8" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">jgworlddrivers.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="b789bd58-83a1-482e-aff6-48c4b32fc906" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">domain454002.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="223f9cdd-49ac-4ba0-98bc-e8a14554a978" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">advancedhelper.net</Content>
+			</IndicatorItem>
+			<IndicatorItem id="cf3659d6-556b-481d-b73b-c177ae46db67" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="daecf905-e545-472e-8f06-fbeaf334001c" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">domain454002.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="a656e6e7-00bb-41c0-bdec-2d8899d0a123" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="47d8aed8-4e3c-4186-9544-326af12e7115" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">555pokerstreamx.org</Content>
+			</IndicatorItem>
+			<IndicatorItem id="57ed705a-0bff-418c-87dc-0d1ed7d7ee2f" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="f1ad4c60-d13e-4c48-93c5-ccd970d9d5ec" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">advancedhelper.net</Content>
+			</IndicatorItem>
+			<IndicatorItem id="00944410-7737-4c5e-954f-58bcc73d979b" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">mullyfonner383.org</Content>
+			</IndicatorItem>
+			<IndicatorItem id="8ec53860-d547-45ff-b295-a3cface77ff6" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="58e2c55e-5496-4d05-a399-81421cc4c236" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">ns1.cgimybin.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="580520ea-982e-4120-9763-985c09321ff0" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">koloboyz.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="add61eea-9850-427c-9c35-cc2d84930bff" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">rdn-life.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="2a3ed303-2406-4626-aa04-372e692c63e9" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">ammitober.net</Content>
+			</IndicatorItem>
+			<IndicatorItem id="fedcf76a-17c1-49f5-9865-2f62c7f80854" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">artyeaigkbm.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="b1532898-03ad-4c5f-a5f6-fcb3166fe896" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">domain454002.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="21629e6b-80a3-4af6-b104-721ff2fa811f" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="4dfac714-ffc5-4f8c-9ebb-759f790a342d" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">advancedhelper.net</Content>
+			</IndicatorItem>
+			<IndicatorItem id="b58ca710-fde7-461f-a622-58027a782a37" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="fbf91975-3f6c-4a4d-8c25-8744846dc529" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">zouweengongohgaegeetiebi.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="8e99aadb-766e-45f2-bdb8-78409e153e09" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">gamemari.net</Content>
+			</IndicatorItem>
+			<IndicatorItem id="6885150d-79a9-4d29-ab0c-c49d24d9df36" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">jjvse.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="ee6d38d8-f179-4cf9-968b-425ba1daa76a" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">festivaloffire.net</Content>
+			</IndicatorItem>
+			<IndicatorItem id="53bc51a9-531c-4611-8e40-f8a6c25eade7" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string">jgworlddrivers.com</Content>
+			</IndicatorItem>
+			<IndicatorItem id="f7d4c3ca-4169-4b42-81ed-c988a74de9c2" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="28ff9ba4-db37-43b8-b87d-8848efc4ac14" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="1bb713a5-5b71-4285-825c-829425c07407" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="5f60a4cd-ac63-4ccb-8452-31a49c6a4720" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="889ed505-34ca-41ef-9d71-076cea83b02b" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="80cc6ca1-87a0-459d-a0aa-c85c73e7a4cc" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="b46d1b9c-a1d6-4b05-9a67-8e4830ee0b71" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="b120b8d8-7d00-40bf-9e91-23348508a1a1" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="179dad4b-8b2d-4c5b-afd4-4735ff196940" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="4c135722-920d-4a5f-b474-a7639c626996" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="c755fdd0-3190-42d5-b5f0-734255250f2a" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="80e6c2f6-829f-4d86-93af-a31ab76659c0" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="ff41f2f6-93d4-4265-ac9e-ab1aeef50af5" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="bff9173c-ed84-431f-bdb2-03bcdcb6dc89" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="09a67b66-287c-4536-967a-b0b0655b8a4b" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="1ae6a496-8f7c-43e7-8924-fd38256a937b" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="f56bb4ac-17c6-4571-b8bf-dafd278f60a0" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="7835ab64-dd6d-4548-aaa1-adc2e8aa1bbd" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="2a1a109a-fd68-43d5-929d-039c218e714c" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="b2d656c8-7a31-4b02-b776-9889ac27dc11" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="ba5dc810-a5d8-442e-ba22-29764d937b77" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="c1c4ea42-7a19-42c6-a767-05fb16453130" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="d4e128ed-4b2f-4b24-b0ee-0eb7f064f214" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+			<IndicatorItem id="19032070-6aee-451c-a210-b240374ff579" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+		</Indicator>
+	</definition>
+</ioc>
