@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<ioc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="iocfiles/9155314f-f210-4fa0-a595-002aeb16c1df" last-modified="2017-11-08T23:49:40" xmlns="http://schemas.mandiant.com/2010/ioc">
+	<short_description> ip threat </short_description>
+	<description> 开源情报 </description>
+	<authored_by> wangxin 17 </authored_by>
+	<authored_date>2017-11-08T23:49:40</authored_date>
+	<links />
+	<definition>
+		<Indicator operator="OR" id="887f115a-2561-4251-a2d6-533b57e47232">
+			<IndicatorItem id="93712398-999f-4a57-afb4-adb51b10a573" condition="contains">
+				<Context document="Snort" search="Snort/Snort" type="mir" />
+				<Content type="string">alert icmp $EXTERNAL_NET any -> $HOME_NET any (msg:"ICMP Destination Unreachable Port Unreachable"; icode:3; itype:3; classtype:misc-activity; sid:402; rev:7;)
+</Content>
+				</IndicatorItem>
+			<IndicatorItem id="83d8ef21-a5d8-4412-92a8-05aa6e8096d7" condition="is">
+				<Context document="PortItem" search="PortItem/remoteIP" type="mir" />
+				<Content type="IP">54.37.22.26</Content>
+			</IndicatorItem>
+			<IndicatorItem id="31f30f6e-9d5e-4d2b-8e53-d48a25f5b17c" condition="contains">
+				<Context document="Network" search="Network/DNS" type="mir" />
+				<Content type="string"></Content>
+			</IndicatorItem>
+		</Indicator>
+	</definition>
+</ioc>

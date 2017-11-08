@@ -3,7 +3,11 @@
 import os
 import fileinput
 import uuid
+import json
 from datetime import datetime
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
 '''
 snort_rules = {'': '',
                '': ''
@@ -12,6 +16,7 @@ snort_rules = {'': '',
 snort_rules = {'SNMP request tcp': 'snort_rule_for_SNMP_REQUEST_TCP',
                'SCAN FIN': 'snort_rule_for_SCAN_FIN'
                 }
+
 
 def printIOCHeader(description,f):
     f.write('<?xml version="1.0" encoding="us-ascii"?>\n')
@@ -64,19 +69,22 @@ def snortTermPopulate(snort_rule,f):
     f.write('\t\t\t<IndicatorItem id="'+str(uuid.uuid4())+'" condition="contains">\n\t\t\t\t<Context document="Snort" search="Snort/Snort" type="mir" />\n\t\t\t\t<Content type="string">'+ snort_rule + '</Content>\n\t\t\t\t</IndicatorItem>\n')
 
 def generateIOC(vulinfo):
-    iocname = str(uuid.uuid4())
+    f_json=open("./SnortRulesJson/dictionary.json","r")
+    dic=json.load(f_json)
     for key in vulinfo:
-        for x in vulinfo[key][0]:
+        for attack_type in vulinfo[key][0]:
+            iocname = str(uuid.uuid4())  
             f = open('iocfiles/%s' % iocname, 'w+')
             description = ''
-            for y in vulinfo[key][1]:
-                description += y
+            for desc_item in vulinfo[key][1]:
+                description += desc_item
             printIOCHeader(description,f)
-            if snort_rules.has_key(x):
-                snortTermPopulate(snort_rules[x],f)
+            snort_rule = dic[attack_type]
+            snortTermPopulate(snort_rule,f)
             ipTermPopulate(key, f)
-            for z in vulinfo[key][2]:
-                domainTermPopulate(z, f)
-        printIOCFooter(f)
-        f.close()
+            for dns_item in vulinfo[key][2]:
+                domainTermPopulate(dns_item , f)
+            printIOCFooter(f)
+            f.close()
+    f_json.close
 

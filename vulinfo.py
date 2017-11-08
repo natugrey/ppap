@@ -17,21 +17,25 @@ def getvulinfo(iplist):
     list = []
     descriptions = []
     dns = []
+    types = []
     for key in iplist:
-        for x in iplist[key]:
-            list.append(iplist[key][1])
-            for y in scanipv4(key):
-                descriptions.append(y['info'])
-                dns.append(y['dns'])
-            for y in scanip(key):
-                descriptions.append(y['info'])
-                dns.append(y['dns'])
-            for y in ipcheck(key):
-                descriptions.append(y['info'])
-                dns.append(y['dns'])
-            list.append(descriptions)
-            list.append(dns)
-            vulinfo[key] = list
-            list = []
-    # print vulinfo
+        for attack_type in iplist[key]:
+            types.append(attack_type)
+            #list.append(iplist[key][1]) #ins ip 
+        for y in scanipv4(key):
+            descriptions.append(y['info'])
+            dns.append(y['dns'])
+        for y in scanip(key):
+            descriptions.append(y['info'])
+            dns.append(y['dns'])
+        for y in ipcheck(key):
+            descriptions.append(y['info'])
+            dns.append(y['dns'])
+        list.append(types)
+        list.append(descriptions)
+        list.append(dns)
+        vulinfo[key] = list
+       # print vulinfo[key]
+        list = []
+    print vulinfo
     return vulinfo

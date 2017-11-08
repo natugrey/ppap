@@ -3,6 +3,7 @@ import re
 import time
 from ifapt import ifapt
 from vulinfo import getvulinfo
+from ioc_creator import generateIOC
 
 '''
 iplist = {'ip':(timestamp,type),
@@ -27,29 +28,28 @@ def dealwithlogs(f):
         line = f.readline()
         if line:
             try:
-                ip = re.match('.*\D([\d]+\.[\d]+\.[\d]+\.[\d]+)(:[\d])* ->', line).group(1)
-                print ip
+                ip = re.match('.*\D([\d]+\.[\d]+\.[\d]+\.[\d]+)(:[\d]+)* ->', line).group(1)
+              #  print ip
                 if ip:
                     # date = re.match('([\d]+/[\d]+-[\d]+:[\d]+:[\d]+\.[\d]+)[\D]', line).group(1)
-                    type = re.match('.*\[\*\*] \[[^\]]+] ([\w ]+) \[\*\*.*', line).group(1)
+                    type = re.match('.*\[\*\*] \[[^\]]+] ([\w \*\/\-]+) \[\*\*.*', line).group(1)
                     # timestamp = date2timestamp(date)
                     if not iplist.has_key(ip):
                         iplist[ip] = []
                     # rel = (timestamp,type)
-                    iplist[ip].append(type)
+                    if type not in iplist[ip]:  #每个ip中相同的攻击类型只记录一次
+                        iplist[ip].append(type)
+                   # print type
             except Exception,e:
                 print e
         else:
             break
-from ioc_creator import generateIOC
+#from ioc_creator import generateIOC
 def main():
-    # f = open('snort_logs/Scan_alert', 'r');
-    # dealwithlogs(f)
-    # f.close()
-    f = open('snort_logs/ICMP_Redir_alert', 'r')
+    f = open('snort_logs/test', 'r')
     dealwithlogs(f)
     f.close()
-    print iplist
+   # print iplist
     # ifapt(iplist)
     vulinfo = getvulinfo(iplist)
     generateIOC(vulinfo)

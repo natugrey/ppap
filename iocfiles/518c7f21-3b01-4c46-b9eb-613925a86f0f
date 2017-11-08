@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<ioc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="iocfiles/518c7f21-3b01-4c46-b9eb-613925a86f0f" last-modified="2017-11-09T00:00:53" xmlns="http://schemas.mandiant.com/2010/ioc">
+	<short_description> ip threat </short_description>
+	<description>  </description>
+	<authored_by> wangxin 17 </authored_by>
+	<authored_date>2017-11-09T00:00:53</authored_date>
+	<links />
+	<definition>
+		<Indicator operator="OR" id="21202665-88e9-4163-a89b-aef20e9e6e3e">
+			<IndicatorItem id="da330984-c6f8-49a4-8faf-bc66634a8e7c" condition="contains">
+				<Context document="Snort" search="Snort/Snort" type="mir" />
+				<Content type="string">alert icmp $EXTERNAL_NET any -> $HOME_NET any (msg:"ICMP PING NMAP"; dsize:0; itype:8; reference:arachnids,162; classtype:attempted-recon; sid:469; rev:3;)
+</Content>
+				</IndicatorItem>
+			<IndicatorItem id="3ddc65a0-512f-4c34-9937-66ae0bfce99f" condition="is">
+				<Context document="PortItem" search="PortItem/remoteIP" type="mir" />
+				<Content type="IP">93.91.48.23</Content>
+			</IndicatorItem>
+		</Indicator>
+	</definition>
+</ioc>

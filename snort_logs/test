@@ -1,0 +1,2 @@
+11/06-14:45:17.547358  [**] [1:469:3] ICMP PING NMAP [**] [Classification: Attempted Information Leak] [Priority: 2] {ICMP} 93.91.48.23 -> 67.216.203.183
+11/06-14:45:17.709200  [**] [1:404:6] ICMP Destination Unreachable Protocol Unreachable [**] [Classification: Misc activity] [Priority: 3] {ICMP} 93.91.48.23 -> 67.216.203.183

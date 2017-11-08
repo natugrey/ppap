@@ -62,7 +62,7 @@ def dataformat(res):
     if len(res['reputation']['reputation']['activities']) > 0:
         for x in res['reputation']['reputation']['activities']:
             dict = {}
-            print x
+            # print x
             if x.has_key('domain'):
                 dict['dns'] = x['domain']
             if x.has_key('name'):

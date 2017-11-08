@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<ioc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="iocfiles/4623de65-ba41-471d-8421-6c86ae1a28a6" last-modified="2017-11-08T22:54:27" xmlns="http://schemas.mandiant.com/2010/ioc">
+	<short_description> ip threat </short_description>
+	<description>  </description>
+	<authored_by> wangxin 17 </authored_by>
+	<authored_date>2017-11-08T22:54:27</authored_date>
+	<links />
+	<definition>
+		<Indicator operator="OR" id="c0fbf753-1ba3-48ee-a596-6558f34f47b3">
+			<IndicatorItem id="4e2da275-0075-4e77-9b34-8fce6e0956d1" condition="is">
+				<Context document="PortItem" search="PortItem/remoteIP" type="mir" />
+				<Content type="IP">125.162.83.118</Content>
+			</IndicatorItem>
